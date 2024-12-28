@@ -1,0 +1,126 @@
+﻿body {
+    padding-left: 10%;
+}
+
+header {
+    padding-left: 1%;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+aside {
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+footer {
+    background: #333;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+    font-size: medium;
+    color: dimgrey;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Стили панели навигации */
+.navbar p {
+    color: darkgray;
+    padding-left: 15%;
+    margin: 20px 0;
+}
+
+/* Стили панели навигации при наведении мышью */
+.navbar p:hover {
+    color: #3d873b;
+}
+
+/* Комбинированный селектор - применяется ко всем элементам */
+header, footer, aside, body, .navbar {
+    font-family: "Helvetica 65 Medium", sans-serif;
+}
+
+header, footer, body {
+    background-color: #cbd0d1;
+}
+
+.review-container, .review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.slider {
+    position: relative;
+    width: 700px;
+    height: auto;
+    /* Чтобы во время перетаскивания слайда ничего не выделить внутри него */
+    user-select: none;
+    /* Чтобы запретить скролл страницы, если мы начали двигать слайдер по оси X */
+    touch-action: pan-y;
+    margin: 5px;
+}
+
+.slide {
+    width: 700px;
+    height: 300px;
+    /* Чтобы слайды не сжимались */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Для изображений задаём pointer-events: none,
+    чтобы они не перетаскивались мышью */
+.slider img {
+    pointer-events: none;
+    width: 700px;
+    height: 300px;
+}
+
+.slider-list {
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slider-list.grab {
+    cursor: grab;
+}
+
+.slider-list.grabbing {
+    cursor: grabbing;
+}
+
+.slider-track {
+    display: flex;
+}
+
+.slider-arrows {
+    text-align: center;
+}
+
+.next, .prev {
+    background: none;
+    border: none;
+    margin: 0 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.next.disabled, .prev.disabled {
+    opacity: .25;
+    pointer-events: none;
+}

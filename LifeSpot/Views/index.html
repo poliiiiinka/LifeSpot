@@ -3,24 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>LifeSpot</title>
-    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css" />
+    <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css"/>
     <!--Внешний скрипт-->
     <script type="text/javascript" src="../Static/JS/index.js"></script>
     <!--Внутренний скрипт-->
     <script>
-        // Проверка на возраст
-        checkAge();
+        // обработка сессии
+        handleSession(logger, checker /* Коллбек-функции */);
 
-        // Сохранение сессии
-        handleSession()
-
-        // Вывод данных сессии в консоль
-        sessionLog();
-
-        // Функция для получения пользовательского ввода
+        // функция для получения пользовательского ввода   
         const inputParseFunction = function () {
             return document.getElementsByTagName('input')[0].value.toLowerCase();
-        }
 
         setTimeout(() =>
             alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
